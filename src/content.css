@@ -1,0 +1,67 @@
+.sre-box {
+  margin: 6px 0 10px;
+  padding: 8px;
+  border: 1px solid #f2c94c;
+  border-radius: 4px;
+  background: #fffbe8;
+  font-size: 12px;
+  color: #333;
+}
+
+.sre-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.sre-row-label {
+  width: 42px;
+  flex: none;
+  font-weight: 600;
+}
+
+.sre-select {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+}
+
+.sre-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  margin-bottom: 6px;
+}
+
+.sre-checks-title {
+  width: 100%;
+  color: #666;
+}
+
+.sre-checks label {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.sre-error {
+  margin-bottom: 6px;
+  color: #c0392b;
+}
+
+.sre-apply {
+  width: 100%;
+  padding: 5px;
+  border: 0;
+  border-radius: 3px;
+  background: #1064bc;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sre-apply:hover {
+  background: #0b4f96;
+}
