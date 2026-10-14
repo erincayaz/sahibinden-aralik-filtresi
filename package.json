@@ -2,6 +2,10 @@
   "name": "sahibinden-aralik-filtresi",
   "private": true,
   "scripts": {
-    "test": "node --test test/core.test.js"
-  }
+    "test": "node --test test/core.test.js",
+    "package": "npm test && node scripts/package.js",
+    "icons": "python3 scripts/make-icons.py"
+  },
+  "version": "1.0.0",
+  "license": "MIT"
 }

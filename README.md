@@ -28,7 +28,7 @@ Sahibinden'de "5 ile 15 yaş arası, 2+1 veya 3+1, 3. ile 8. kat arası" bir dai
 - Fiyat, m², konum gibi diğer filtrelerine dokunmaz.
 - Sahibinden'in kendi kutucuk listesi yerinde kalır, istersen elle seçmeye devam edebilirsin.
 - Sayfayı açtığında mevcut filtrelerin aralığa dönüştürülüp kutuya doldurulur.
-- **Hiçbir veri toplamaz**, hiçbir sunucuya istek atmaz. Sadece sahibinden.com sayfalarında çalışır.
+- **Hiçbir veri toplamaz**, hiçbir sunucuya istek atmaz. Sadece sahibinden.com sayfalarında çalışır. Ayrıntılar: [Gizlilik Politikası](PRIVACY.md).
 
 ## Kurulum
 
@@ -90,14 +90,21 @@ manifest.json      Manifest V3 (Chrome + Firefox ortak)
 src/core.js        Saf mantık: etiket ayrıştırma, aralık → seçenek, URL kurma (DOM'a dokunmaz)
 src/content.js     Sayfaya aralık kutusunu ekleyen content script
 src/content.css    Kutu stilleri
+icons/             Eklenti ikonları (scripts/make-icons.py ile üretilir)
 test/              core.js birim testleri
+scripts/           İkon üretimi ve paketleme
+store/             Mağaza metinleri ve görselleri
 ```
 
-Testler için Node 18+ yeterli, bağımlılık yok:
+Node 18+ ve Python 3 yeterli, bağımlılık yok:
 
 ```bash
-npm test
+npm test          # birim testleri
+npm run package   # testleri çalıştırır, dist/ altına Chrome ve Firefox zip'lerini üretir
+npm run icons     # icons/ altındaki PNG'leri yeniden üretir
 ```
+
+Chrome paketinde Firefox'a özel `browser_specific_settings` alanı çıkarılır; geri kalanı iki tarayıcıda aynıdır.
 
 ## Bilinen sınırlamalar
 
